@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PZ6-Bt-Pb1">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Flash View Controller-->
+        <scene sceneID="iX3-Is-NHc">
+            <objects>
+                <viewController id="PZ6-Bt-Pb1" customClass="FlashViewController" customModule="Fiszki1_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6cy-0B-C3e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pTF-XR-asj">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="LE2-Hp-O0A">
+                                        <leftBarButtonItems>
+                                            <barButtonItem title="Back" id="2ea-no-NfT">
+                                                <connections>
+                                                    <action selector="goBack:" destination="PZ6-Bt-Pb1" id="BW8-CK-Raw"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem systemItem="trash" id="Yzv-VC-bfh">
+                                                <connections>
+                                                    <action selector="deleteCard:" destination="PZ6-Bt-Pb1" id="PUm-SU-UBZ"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </leftBarButtonItems>
+                                        <rightBarButtonItems>
+                                            <barButtonItem systemItem="add" id="JUU-Cq-fjV">
+                                                <connections>
+                                                    <action selector="addButtonTapped:" destination="PZ6-Bt-Pb1" id="O0V-D3-D0M"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem systemItem="save" id="yDN-PQ-cSo">
+                                                <connections>
+                                                    <action selector="saveButtonTapped:" destination="PZ6-Bt-Pb1" id="umR-Eu-sBH"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </rightBarButtonItems>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vhr-Ho-hTt">
+                                <rect key="frame" x="0.0" y="574" width="93" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <action selector="dontKnowButtonTapped:" destination="PZ6-Bt-Pb1" eventType="touchUpInside" id="m1d-U2-07O"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyr-FZ-hPV">
+                                <rect key="frame" x="282" y="574" width="93" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="knowItButtonTapped:" destination="PZ6-Bt-Pb1" eventType="touchUpInside" id="nQ6-Tj-ibh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="erx-FR-iVA">
+                                <rect key="frame" x="94" y="574" width="93" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="associateButtonTapped:" destination="PZ6-Bt-Pb1" eventType="touchUpInside" id="ARk-Tq-gIA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dY1-QJ-HuA">
+                                <rect key="frame" x="188" y="574" width="93" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="rememberButtonTapped:" destination="PZ6-Bt-Pb1" eventType="touchUpInside" id="XTR-5Q-AOS"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hUT-BS-2Bx">
+                                <rect key="frame" x="0.0" y="64" width="375" height="502"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="frame-upright" translatesAutoresizingMaskIntoConstraints="NO" id="1W2-WO-JNT">
+                                        <rect key="frame" x="0.0" y="8" width="375" height="474"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Lorem ipsum dolor" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QjQ-LP-My8">
+                                        <rect key="frame" x="26" y="111" width="322" height="343"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTa-mp-OEB">
+                                        <rect key="frame" x="26" y="39" width="322" height="415"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="flipCard:" destination="PZ6-Bt-Pb1" eventType="touchUpInside" id="uAd-Fc-8sK"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Owoce" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxI-YF-1bg">
+                                        <rect key="frame" x="48" y="53" width="274" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="frc-h8-nq8">
+                                        <rect key="frame" x="48" y="306" width="274" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Obverse" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyh-Mc-Goa">
+                                        <rect key="frame" x="50" y="129" width="272" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reverse" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flO-Od-D2I">
+                                        <rect key="frame" x="50" y="277" width="272" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aLA-GW-L47">
+                                        <rect key="frame" x="50" y="158" width="274" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="mMP-OU-0Gt"/>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="addButton" destination="JUU-Cq-fjV" id="VdN-98-fnS"/>
+                        <outlet property="addTextField" destination="aLA-GW-L47" id="nvL-Tx-9qY"/>
+                        <outlet property="addTextField2" destination="frc-h8-nq8" id="ctw-fK-4CM"/>
+                        <outlet property="associateButton" destination="erx-FR-iVA" id="OIX-8G-OKO"/>
+                        <outlet property="backButton" destination="2ea-no-NfT" id="KPo-2U-Jmc"/>
+                        <outlet property="cardTextView" destination="QjQ-LP-My8" id="X2e-xF-aTa"/>
+                        <outlet property="cardView" destination="1W2-WO-JNT" id="ngq-Lb-IdB"/>
+                        <outlet property="dontKnowButton" destination="vhr-Ho-hTt" id="NaU-lN-qjA"/>
+                        <outlet property="flipCardButton" destination="jTa-mp-OEB" id="GpX-lj-fYG"/>
+                        <outlet property="knowItButton" destination="pyr-FZ-hPV" id="5b1-4D-3S7"/>
+                        <outlet property="myNavBar" destination="pTF-XR-asj" id="ey1-Dw-2BP"/>
+                        <outlet property="numberOfCards" destination="LE2-Hp-O0A" id="XzU-Zp-Kmz"/>
+                        <outlet property="obverseLabel" destination="hyh-Mc-Goa" id="myj-7p-sh7"/>
+                        <outlet property="rememberButton" destination="dY1-QJ-HuA" id="4hu-zj-aVN"/>
+                        <outlet property="reverseLabel" destination="flO-Od-D2I" id="Nkd-JU-C4g"/>
+                        <outlet property="saveButton" destination="yDN-PQ-cSo" id="nqv-TU-KbT"/>
+                        <outlet property="trashButton" destination="Yzv-VC-bfh" id="ueM-Ie-hJ5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fSR-kf-FgL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="805.60000000000002" y="31.934032983508249"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="frame-upright" width="375" height="504"/>
+    </resources>
+</document>
